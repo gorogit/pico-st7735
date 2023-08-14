@@ -18,11 +18,11 @@ project(pico-st7735 C CXX ASM)
 pico_sdk_init()
 
 # library configuration (override if necessary)
-set(SPI_TFT_PORT "spi1" CACHE STRING "TFT spi port-name")
-set(SPI_TFT_CS   "9"    CACHE STRING "TFT CS  pin number")
-set(SPI_TFT_DC   "10"   CACHE STRING "TFT DC  pin number")
-set(SPI_TFT_RST  "11"   CACHE STRING "TFT RST pin number")
-set(TFT_OPTIONS TFT_ENABLE_BLACK TFT_ENABLE_RESET TFT_ENABLE_TEXT TFT_ENABLE_SHAPES
+set(SPI_TFT_PORT "spi0" CACHE STRING "TFT spi port-name")
+set(SPI_TFT_CS   "1"    CACHE STRING "TFT CS  pin number")
+set(SPI_TFT_DC   "5"   CACHE STRING "TFT DC  pin number")
+set(SPI_TFT_RST  "4"   CACHE STRING "TFT RST pin number")
+set(TFT_OPTIONS TFT_ENABLE_GENERIC TFT_ENABLE_RESET TFT_ENABLE_TEXT
                 TFT_ENABLE_ROTATE TFT_ENABLE_SCROLL
             CACHE STRING "TFT options/functions")
 
