@@ -17,9 +17,11 @@
 
 void tft_spi_init() {
     printf("tft_spi_init called\n");
+#if 0
     gpio_init(SPI_TFT_CS);
     gpio_set_dir(SPI_TFT_CS, GPIO_OUT);
     gpio_put(SPI_TFT_CS, 1);  // Chip select is active-low
+#endif
 
     gpio_init(SPI_TFT_DC);
     gpio_set_dir(SPI_TFT_DC, GPIO_OUT);
