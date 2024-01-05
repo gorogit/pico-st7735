@@ -58,92 +58,21 @@ void Bcmd() {
     write_command(ST7735_SWRESET);
     __delay_ms(50);
     write_command(ST7735_SLPOUT);
-    __delay_ms(250);
-    __delay_ms(250);
-    write_command(ST7735_COLMOD);
-    write_data(0x05);
     __delay_ms(10);
-    write_command(ST7735_FRMCTR1);
-    write_data(0x00);
-    write_data(0x06);
-    write_data(0x03);
+    write_command(ST7735_COLMOD);
+    write_data(0x55);
     __delay_ms(10);
     write_command(ST7735_MADCTL);
-    write_data(0x08);  // BGR
-    write_command(ST7735_DISSET5);
-    write_data(0x15);
-    write_data(0x02);
-    write_command(ST7735_INVCTR);
     write_data(0x00);
     write_command(ST7735_PWCTR1);
-    write_data(0x02);
-    write_data(0x70);
-    __delay_ms(10);
-    write_command(ST7735_PWCTR2);
-    write_data(0x05);
-    write_command(ST7735_PWCTR3);
-    write_data(0x01);
-    write_data(0x02);
-    write_command(ST7735_VMCTR1);
-    write_data(0x3C);
-    write_data(0x38);
-    __delay_ms(10);
-    write_command(ST7735_PWCTR6);
-    write_data(0x11);
-    write_data(0x15);
-    write_command(ST7735_GMCTRP1);
-    write_data(0x09);
-    write_data(0x16);
-    write_data(0x09);
-    write_data(0x20);
-    write_data(0x21);
-    write_data(0x1B);
-    write_data(0x13);
-    write_data(0x19);
-    write_data(0x17);
-    write_data(0x15);
-    write_data(0x1E);
-    write_data(0x2B);
-    write_data(0x04);
-    write_data(0x05);
-    write_data(0x02);
-    write_data(0x0E);
-    write_command(ST7735_GMCTRN1);
-    write_data(0x0B);
-    write_data(0x14);
-    write_data(0x08);
-    write_data(0x1E);
     write_data(0x22);
-    write_data(0x1D);
-    write_data(0x18);
-    write_data(0x1E);
-    write_data(0x1B);
-    write_data(0x1A);
-    write_data(0x24);
-    write_data(0x2B);
-    write_data(0x06);
-    write_data(0x06);
-    write_data(0x02);
-    write_data(0x0F);
-    __delay_ms(10);
-    write_command(ST7735_CASET);
-    write_data(0x00);
-    write_data(0x02);
-    write_data(0x08);
-    write_data(0x81);
-    write_command(ST7735_RASET);
-    write_data(0x00);
-    write_data(0x01);
-    write_data(0x08);
-    write_data(0xA0);
     write_command(ST7735_NORON);
     __delay_ms(10);
     write_command(ST7735_DISPON);
-    __delay_ms(250);
-    __delay_ms(250);
 }
 #endif
 
+#if 0
 void Rcmd1() {
     write_command(ST7735_SWRESET);
     __delay_ms(150);
@@ -190,6 +119,7 @@ void Rcmd1() {
     write_command(ST7735_COLMOD);
     write_data(0x05);
 }
+#endif
 
 #if defined TFT_ENABLE_GREEN
 void Rcmd2green() {
@@ -221,6 +151,7 @@ void Rcmd2red() {
 }
 #endif
 
+#if 0
 void Rcmd3() {
     write_command(ST7735_GMCTRP1);
     write_data(0x02);
@@ -261,6 +192,7 @@ void Rcmd3() {
     write_command(ST7735_DISPON);
     __delay_ms(100);
 }
+#endif
 
 /*
   SPI displays set an address window rectangle for blitting pixels
