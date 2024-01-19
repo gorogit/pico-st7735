@@ -59,6 +59,7 @@ void tft_spi_init();
 
 #define spiwrite(data) spi_write_blocking(SPI_TFT_PORT, &data, 1)
 
+#if 0
 #define tft_cs_low()                   \
     asm volatile("nop \n nop \n nop"); \
     gpio_put(PIN_TFT_CS, 0);           \
@@ -67,6 +68,10 @@ void tft_spi_init();
     asm volatile("nop \n nop \n nop"); \
     gpio_put(PIN_TFT_CS, 1);           \
     asm volatile("nop \n nop \n nop")
+#else
+#define tft_cs_low()
+#define tft_cs_high()
+#endif
 
 #define tft_dc_low()                   \
     asm volatile("nop \n nop \n nop"); \
