@@ -63,7 +63,7 @@ void Bcmd() {
     write_data(0x55);
     __delay_ms(10);
     write_command(ST7735_MADCTL);
-    write_data(0x00);
+    write_data(0x60);
     write_command(ST7735_PWCTR1);
     write_data(0x22);
     write_command(ST7735_NORON);
