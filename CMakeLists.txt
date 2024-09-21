@@ -19,7 +19,7 @@ pico_sdk_init()
 
 # library configuration (override if necessary)
 set(SPI_TFT_PORT "spi0" CACHE STRING "TFT spi port-name")
-set(SPI_TFT_CS   "1"    CACHE STRING "TFT CS  pin number")
+set(SPI_TFT_CS   "17"    CACHE STRING "TFT CS  pin number")
 set(SPI_TFT_DC   "5"   CACHE STRING "TFT DC  pin number")
 set(SPI_TFT_RST  "4"   CACHE STRING "TFT RST pin number")
 set(TFT_OPTIONS TFT_ENABLE_GENERIC TFT_ENABLE_RESET TFT_ENABLE_TEXT
